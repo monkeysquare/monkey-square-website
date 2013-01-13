@@ -11,7 +11,15 @@
 //   item, use the pattern “/about/*/”; “/about/*” will also select the parent,
 //   because “*” matches zero or more characters.
 
-Compile("/stylesheet/", (context) => {
+Compile("/css/*/", (context) => {
+  // don’t filter or layout
+});
+
+Compile("/js/*/", (context) => {
+  // don’t filter or layout
+});
+
+Compile("/img/*/", (context) => {
   // don’t filter or layout
 });
 
@@ -19,18 +27,26 @@ Compile("*", (context) => {
   if (context.Item.IsBinary) {
     // don’t filter binary items
   } else {
-    context.WithFilter("markdown").WithLayout("default");
+    context.WithLayout("default");
   }
 });
 
-Route("/stylesheet/", (context) => {
-  return "/style.css";
+Route("/css/*/", (context) => {
+  return context.Item.Identifier.Chop() + context.Item.Meta.Extension;
+});
+
+Route("/js/*/", (context) => {
+  return context.Item.Identifier.Chop() + context.Item.Meta.Extension;
+});
+
+Route("/img/*/", (context) => {
+  return context.Item.Identifier.Chop() + context.Item.Meta.Extension;
 });
 
 Route("*", (context) => {
   if (context.Item.IsBinary) {
     // Write item with identifier /foo/ to /foo.ext
-    return context.Item.Identifier.Chop() + context.Item.Meta["extension"];
+    return context.Item.Identifier.Chop() + context.Item.Meta.Extension;
   } else {
     // Write item with identifier /foo/ to /foo/index.html
     return context.Item.Identifier + "index.html";
