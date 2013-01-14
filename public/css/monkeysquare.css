@@ -355,11 +355,9 @@ body > header nav li.selected a {
 }
 
 .module-bio {
-  float: left;
   margin: 0 10px;
-  padding-top: 24px;
-  padding-bottom: 64px;
-  width: 300px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 .module-bio:last-child {
   margin-right: 0;
@@ -372,7 +370,7 @@ body > header nav li.selected a {
   margin-bottom: 2px;
 }
 #content .module-bio p {
-  font-size: 11.71px;
+  font-size: 13px;
   line-height: 20.49px;
   margin-left: 143px;
   margin-top: 0;
