@@ -27,6 +27,9 @@
             <li{% if item.nav == 'home' %} class="selected"{% endif %}>
               <a href="/">Home</a>
             </li>
+            <li{% if item.nav == 'donate' %} class="selected"{% endif %}>
+              <a href="/donate">Donate</a>
+            </li>
           </ul>
         </nav>
       </div>
@@ -73,7 +76,7 @@
       </div>
     </footer>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
-    <script src="js/twitter.js"></script>
+    <script src="/js/twitter.js"></script>
     <script type="text/javascript">
       $(function() {
         getTwitterFeed("MonkeySquareOrg", 4, false);
