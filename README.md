@@ -2,7 +2,7 @@
 
 A non-profit organization started by [Phil Haack](http://haacked.com/), [Scott Hanselman](http://www.hanselman.com/blog/), [Joseph Hill](https://twitter.com/josephhill), [David Nielsen](http://davidnielsen.wordpress.com/), [Dale Ragan](http://ragan.io/), and [Louis Salin](https://twitter.com/lonestardev) with no hidden agenda to evangelize cross platform and open-source development in .NET. Only together can we change the culture around our ecosystem.
 
-This repository is the public facing website for the Monkey Square site.
+This repository is the public facing website for the Monkey Square.
 
 ## Copyright
 
