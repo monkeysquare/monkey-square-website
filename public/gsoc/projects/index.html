@@ -1,0 +1,225 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>Google Summer of Code Projects - Monkey Square</title>
+
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/grid.css">
+    <link rel="stylesheet" href="/css/monkeysquare.css">
+
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png" />
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.1/modernizr.min.js"></script>
+    <script type="text/javascript" src="//use.typekit.net/zln0alj.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  </head>
+  <body>
+
+    <header>
+      <div class="container_16">
+        <a id="logo" href="/"><img src="/img/logo.png" alt="Monkey Square" width="185" height="61" /></a>
+        <nav>
+          <ul>
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="//shop.monkeysquare.org/">The Shop</a>
+            </li>
+            <li>
+              <a href="/donate">Donate</a>
+            </li>
+            <li>
+              <a href="/about">About</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section id="subheader">
+  <div class="container_16">
+    <div class="grid_8 prefix_1 description">
+      <h1><strong>GSoC</strong>Projects</h1>
+      <p>This page lists projects that students can apply for. We also encourage students to submit their own ideas.</p>
+    </div>
+    <div class="grid_6 prefix_1 illustration">
+      <img src="/img/about-subheader.png" alt="About" />
+    </div>
+  </div>
+</section>
+<section id="content">
+  <div class="container_16">
+    <div class="grid_16">
+      <div class="ruled-header">
+        <h5>Suggested Projects</h5>
+        <h2>Google Summer of Code 2013</h2>
+      </div>
+    </div>
+    <div class="grid_12">
+      <p>You can use the following links to jump to sections that you're interested in:</p>
+      <ul>
+        <li><a href="#finish-and-deploy-rainy">Finish and deploy Rainy, the Tomboy note syncing server</a></li>
+        <li><a href="#improve-tomboy-on-os-x-and-or-gnome3">Improve Tomboy on OS X and/or GNOME3</a></li>
+        <li><a href="#improve-binding-support-on-the-gnome-desktop">Improve binding support on the GNOME desktop</a></li>
+        <li><a href="#port-f-spot-to-os-x">Port F-Spot to OS X</a></li>
+        <li><a href="#enhance-tomdroid">Enhance Tomdroid</a></li>
+        <li><a href="#webkit-based-chat-view-for-smuxi">Webkit based chat view for Smuxi</a></li>
+        <li><a href="#improve-library-support-in-banshee">Improve library support in Banshee</a></li>
+      </ul>
+    </div>
+
+    <div class="clear"></div>
+
+    <div class="gsoc-projects-top">
+      <div class="module-gsoc-project">
+        <h3 id="finish-and-deploy-rainy">Finish and deploy Rainy, the Tomboy note syncing server</h3>
+        <p>The Tomboy note taking family of applications rely on a server to allow synchronization of notes between devices. However the only public server in existence run by Ubuntu as part of their Ubuntu One services has just been closed down. Additionally the Snowy server has gone unmaintained for years. Last year a project was started to replace it based on our new Tomboy Library and ServiceStack. MonkeySquare wants to run a public server to re-enable notes syncing across Tomboy applications for users.</p>
+        <h4>Desired Deliverables</h4>
+        <p>Finish Rainy to a point where it will scale to, and beyond, our current userbase (estimated at 400.000 regular  users). Ensure that each users notes are stored safely and separately on the server. Produce a simple web interface for Rainy that allows user sign up as well as letting MonkeySquare manage the service. Finally a deployed instance of the service on MonkeySquare resources that is at least of beta level quality.</p>
+      </div>
+      <div class="module-gsoc-project">
+        <h3 id="improve-tomboy-on-os-x-and-or-gnome3">Improve Tomboy on OS X and/or GNOME3</h3>
+        <p>The Tomboy note taking application is currently available on Linux and Android (via Tomdroid). To make implementation of Tomboy on additionally platforms easy a Tomboy Library has been created.</p>
+        <p>Tomboy on OS X is currently at an alpha stage and needs to be completed, additionally the user experience needs to be redesigned.</p>
+        <p>Tomboy on GNOME3 will require porting the application from GTK#2 to GTK#3, as well as to GNOME3 platform libraries where needed. The Tomboy codebase should also be updated to use the Tomboy Library. The user experience should also be updated to be in line with the suggested design on for a <a href="https://live.gnome.org/Design/Apps/Notes">GNOME3 notes application</a>.</p>
+        <h4>Desired Deliverables</h4>
+        <p>Tomboy must be delivered on at least one platform:</p>
+        <ul>
+            <li>For OS X: a 1.0 release quality application deployed in the Mac App Store that is feature comparable to the classic Tomboy experience.</li>
+            <li>For GNOME3: A beta quality application delivered as a buildable tarball, implementing the GNOME3 notes design as closely to the Tomboy semantics as possible that relies on the GNOME3 platform and GTK#3.</li>
+        </ul>
+        <h4>Required Skills</h4>
+        <p>C# and experience with the OS X and/or GNOME3 platform(s).</p>
+      </div>
+      <div class="module-gsoc-project">
+        <h3 id="improve-binding-support-on-the-gnome-desktop">Improve binding support on the GNOME desktop</h3>
+        <p>There is an ongoing effort to automate the generation of C# bindings on the desktop (gnome) by leveraging the new gobject introspection data that is now available for most libraries. GObject introspection data includes xml files and typeobject files (binary) describing the APIs a library exposes. The <a href="https://github.com/andreiagaita/bindinator">bindinator project</a> takes this information and produces gapi files that can then be used with GTK# gapi tools for generating C# bindings.</p>
+        <p>The task is to finish the bindinator project so that it can generate bindings automatically, preferably with no manual intervention (if possible, sometimes some manual tweaking of bindings is needed to improve the api, fix corner cases or provide backward compatibility with existing bindings). The bindinator is currently at a point where it should be able to generate Webkit-Gtk bindings automatically.</p>
+        <p>The importance of this project cannot be overstated: having up to date bindings of all major libraries on the desktop is essential for developers to create apps with C# and keeping it alive and kicking in the Linux desktop and across platforms.</p>
+        <h4>Desired Deliverables</h4>
+        <p>Have the core GTK libraries bound (it can be by finishing existing bindings in GTK# and adding new ones via the bindinator) plus Webkit-GTK and GStreamer libraries, with a process in place so that package owners and/or distro package managers can generate new bindings easily.</p>
+        <h4>Required Skills</h4>
+        <p>C# and XLTS, experience with GObject-Introspection would be useful as would knowledge of C sufficient to read the C codebase which is being bound.</p>
+      </div>
+      <div class="module-gsoc-project">
+        <h3 id="port-f-spot-to-os-x">Port F-Spot to OS X</h3>
+        <p>The F-Spot photo management tool would be greatly improved by being made available on OS X. It would allow F-Spot to reach more users and be more widely available to developers.</p>
+        <h4>Desired Deliverables</h4>
+        <p>A release of comparable quality to F-Spot on Linux running on OS X with integration with the OS X platform where it makes sense such as file selectors and integrating support for OS X features such as Lion style fullscreen mode.</p>
+        <h4>Required Skills</h4>
+        <p>C# and experience with the OS X platform.</p>
+      </div>
+      <div class="module-gsoc-project">
+        <h3 id="enhance-tomdroid">Enhance Tomdroid</h3>
+        <p>Tomdroid is the Tomboy note taking application on Android. The project is enhancing the experience for Android users by fulfilling a number of outstanding feature requests to bring it line with Tomboy, enhancing the user experience and adapting Tomdroid to modern Android APIs and features.</p>
+        <ul>
+            <li>Implement support for Notebooks.</li>
+            <li>Implement Swipe gestures, to do this Tomdroid needs to be rearchitected to use Fragments.</li>
+            <li>Implement versioning of notes, working with the Rainy maintainer will likely be needed to implement this.</li>
+            <li>Implementing support for features in Android 4.0+ such as MediaStore.</li>
+            <li>The rich text editor needs enhancements to be more userfriendly. Additionally support for bulletpoint items is strongly desired.</li>
+            <li>Rearchitecting Tomdroid to move the sync-manager to the background.</li>
+            <li>Making a nice home-screen widget</li>
+        </ul>
+        <h4>Desired Deliverables</h4>
+        <p>A release of Tomdroid in the Google Play Store that supports as many of the features listed above.</p>
+        <h4>Required Skills</h4>
+        <p>Java and experience with the Android platform</p>
+      </div>
+      <div class="module-gsoc-project">
+        <h3 id="webkit-based-chat-view-for-smuxi">Webkit based chat view for Smuxi</h3>
+        <p>The Smuxi IRC/Jabber client would like to see a webkit based chat view implemented that allows:</p>
+        <ul>
+            <li>HTML/CSS theming.</li>
+            <li>Dynamic backscroll (History being loaded on demand while scrolling).</li>
+            <li>Optional media previews for images and websites.</li>
+            <li>Images should be be expandable in chat messages, as should pastebin links.</li>
+            <li>Live filter application allowing for e.g. hiding/showing events, this filter should be applied not just for incoming messages but also for the history.</li>
+        </ul>
+        <h4>Tasks</h4>
+        <ul>
+            <li>Implement webkit-sharp based ChatView</li>
+            <li>Insertion of arbitrary messages (insert at line X, not just append)</li>
+            <li>Test/port webkit-sharp to Windows / Mac OSX</li>
+        </ul>
+        <h4>Desired Deliverables</h4>
+        <p>A release of Smuxi implementing the WebKit based chat view on at least Linux with every feature listed above.</p>
+        <h4>Required Skills</h4>
+        <p>C# and experience with WebKit.</p>
+      </div>
+      <div class="module-gsoc-project">
+        <h3 id="improve-library-support-in-banshee">Improve library support in Banshee</h3>
+        <p>The Banshee media player currently only supports handling and monitoring one library, meaning the users music collection can be rescanned and updated but not e.g. his audiobook collection. Additionally the video and audiobook libraries are very basic.</p>
+        <p>The library watcher needs to be updated to support multiple locations on the filesystem. When added audiobooks should automatically go to the audiobook library, videos to the correct video library, etc..</p>
+        <h4>Desired Deliverables</h4>
+        <p>A beta quality release of Banshee with the features listed above on at least Linux based on the GTK#3 branch.</p>
+        <h4>Required Skills</h4>
+        <p>C# and GTK#, experience with SQLite and filesystem monitoring will be helpful.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <footer>
+      <div id="footer-top">
+        <div class="container_16">
+          <div class="grid_9">
+            <h3>From the <strong>Community</strong></h3>
+            <div class="module-community">
+              <ul>
+                <li>MonkeySpace, Mono 3.0, Tomboy and Banshee!  <a href="http://worldofgnome.org/monkeyspace-mono-3-0-tomboy-and-banshee/">View...</a></li>
+                <li>Open source and .NET at MonkeySpace 2012  <a href="http://blog.phault.net/2012/10/open-source-and-net-at-monkeyspace-2012/">View...</a></li>
+                <li>MonkeySpace shines a light on the future of .NET OSS  <a href="http://haacked.com/archive/2012/10/21/monkeyspace-dotnet-oss.aspx">View...</a></li>
+                <li>MonkeySpace brings the Open Source .NET community to Boston this October  <a href="http://blog.xamarin.com/monkeyspace-brings-the-open-source-net-community-to-boston-this-october/">View...</a></li>
+                <li>The Conference Formerly Known As Monospace <a href="http://ragan.io/log/the-conference-formerly-known-as-monospace/">View...</a></li>
+                <li>Monospace 2012  <a href="http://ragan.io/log/monospace-2012/">View...</a></li>
+                <li>Xamarin Q/A at Monospace 2011  <a href="http://coderinserepeat.com/blog/archive/2011/Aug-05.html">View...</a></li>
+                <li>On Monospace 2011  <a href="http://www.gregshackles.com/2011/07/on-monospace-2011/">View...</a></li>
+                <li>Monospace is Shipping Up To Boston  <a href="http://ragan.io/log/monospace-is-shipping-up-to-boston/">View...</a></li>
+                <li>Monospace Refresh!  <a href="http://ragan.io/log/monospace-refresh/">View...</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="grid_6 prefix_1">
+            <h3>From Our <strong>Twitter</strong></h3>
+            <div class="module-twitter">
+              <ul id="tweets">
+              </ul>
+            </div>
+            <a href="/donate" class="module-donate">Please help us out and donate</a>
+          </div>
+        </div>
+      </div>
+      <div id="footer-bottom">
+        <div class="container_16">
+          <div class="grid_8">
+            Copyright 2012 - Monkey Square, Inc - All rights reserved
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <script src="/js/twitter.js"></script>
+    <script type="text/javascript">
+      $(function() {
+        getTwitterFeed("MonkeySquareOrg", 4, false);
+      });
+    </script>
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-37638044-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </body>
+</html>
